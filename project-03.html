@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Killer Complex — Joshua Moonsamy</title>
+  <meta name="description" content="Killer Complex, a first-person thriller in Unity where a local AI model plays the kidnapper. Joshua Moonsamy built the hacking maze, the traps, the menus, and the apartment complex.">
+  <meta name="theme-color" content="#10100e">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-complex">
+  <a class="skip" href="#synopsis">Skip to project details</a>
+  <header class="site-header">
+    <a class="logo" href="index.html">Joshua Moonsamy</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span>
+    </button>
+    <nav class="nav" id="site-nav">
+      <a href="index.html#work" aria-current="page">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <a class="back" href="index.html#work">All work</a>
+      <section class="project-hero">
+        <div class="poster">
+          <img src="assets/killer-complex-poster.jpg" alt="Killer Complex title screen. A dim apartment corridor lined with numbered doors and wrapped packages on the floor, with a dark figure standing at the far end." width="1024" height="512">
+        </div>
+        <div class="project-copy">
+          <p class="kicker">Game 03 · Unity · AI</p>
+          <h1>Killer Complex</h1>
+          <p class="team"><span class="meta-label">A game by</span>Joshua Moonsamy and Riyaad Isaacs</p>
+        </div>
+      </section>
+
+      <div class="project-body">
+        <aside class="quick-facts" aria-label="Quick facts">
+          <dl>
+            <div><dt>Engine</dt><dd>Unity 6</dd></div>
+            <div><dt>Team</dt><dd>2 people</dd></div>
+            <div><dt>Context</dt><dd>Coursework</dd></div>
+            <div><dt>My focus</dt><dd>Level design and gameplay</dd></div>
+          </dl>
+          <nav class="page-nav" aria-label="On this page">
+            <a href="#synopsis">Synopsis</a>
+            <a href="#brief">Brief</a>
+            <a href="#role">My role</a>
+            <a href="#tools">Tools</a>
+            <a href="#process">Process</a>
+            <a href="#play">Play</a>
+          </nav>
+        </aside>
+      <section class="facts">
+        <article class="fact" id="synopsis">
+          <h2>Synopsis</h2>
+          <div>
+            <p>Late one evening, a stranger messages you through your apartment computer. He says he has kidnapped your wife, and to keep her alive you must find packages hidden around your apartment complex and deliver them before time runs out.</p>
+            <p>Between jobs, you secretly hack his system through a maze mini-game. Each level you clear brings you closer to exposing him, but failed hacks raise his suspicion. Traps placed around the building can kill you on the spot. The killer is played by a local AI model, so he answers what you type and gets more stressed and aggressive as the game goes on.</p>
+          </div>
+        </article>
+        <article class="fact" id="brief">
+          <h2>Project brief</h2>
+          <div>
+            <p>Killer Complex was our Game Design 3A portfolio of evidence project, built in two stages.</p>
+            <p><strong>Part 2, an AI-integrated game.</strong> Build a new, standalone game with a local large language model running through Ollama. The model had to drive real gameplay, not decoration. Options included adaptive dialogue, procedural story, AI-driven behaviour, and interactive fiction written in real time. The brief advised against Unreal Engine because of integration problems, so we used Unity. We first built a prototype with one working AI feature, then a stable final build.</p>
+            <p><strong>Part 3, outside feedback and refinement.</strong> We showed the Part 2 game to people outside our circle at an in-person game development meetup. We then refined the game based on the feedback we chose to act on, and kept a record of every change.</p>
+          </div>
+        </article>
+        <article class="fact" id="role">
+          <h2>My role</h2>
+          <div>
+            <p>I built gameplay systems, the menus, and much of the level:</p>
+            <ul class="role-list">
+              <li>The hacking maze mini-game, made harder over time, with an interact prompt for using the computer</li>
+              <li>The traps placed around the building, and the markers that identify them</li>
+              <li>The main menu, pause menu, settings button, and the end-game screens</li>
+              <li>The apartment complex layout: the apartment itself and its kitchen, the first- and second-floor corridors, the reception area, the ceilings, and the flooring</li>
+              <li>Spawn points, refining the title screen, and the room notification</li>
+            </ul>
+            <p>Riyaad Isaacs built the Ollama connection, the killer’s chat, and the delivery system.</p>
+          </div>
+        </article>
+        <article class="fact" id="tools">
+          <h2>Tools</h2>
+          <ul class="tools">
+            <li>Unity 6</li>
+            <li>C#</li>
+            <li>Universal Render Pipeline</li>
+            <li>Unity Input System</li>
+            <li>Ollama</li>
+            <li>Llama 3.2 (3B)</li>
+            <li>Git and GitHub</li>
+          </ul>
+        </article>
+        <article class="fact" id="process">
+          <h2>Process</h2>
+          <div class="process-gallery">
+            <figure class="shot">
+              <a href="assets/killer-complex-process-apartment.png" target="_blank" rel="noopener"><img src="assets/killer-complex-process-apartment.png" alt="The furnished apartment in the Unity scene view, with a dining table, sofas, kitchen cabinets, and a computer desk, and labelled spawn markers on the floor." width="1024" height="502" loading="lazy"></a>
+              <figcaption>Laying out the apartment in the Unity scene view. The coloured labels on the floor mark the spawn points I placed in each room.</figcaption>
+            </figure>
+            <div class="shot-pair">
+              <figure class="shot">
+                <a href="assets/killer-complex-process-maze.png" target="_blank" rel="noopener"><img src="assets/killer-complex-process-maze.png" alt="The packet routing maze open on the in-game computer, with a controls panel explaining movement, limited vision, the green uplink goal, and blocked and corrupted tiles." width="1024" height="486" loading="lazy"></a>
+                <figcaption>
+                  <span class="meta-label">Hacking maze</span>
+                  The packet routing maze on the in-game computer. Only the tiles around you are lit, and you have to find the hidden uplink while avoiding blocked and corrupted tiles.
+                </figcaption>
+              </figure>
+              <figure class="shot">
+                <a href="assets/killer-complex-process-corridor.png" target="_blank" rel="noopener"><img src="assets/killer-complex-process-corridor.png" alt="A first-person view down a brick apartment corridor with wall lamps and numbered doors, and on-screen notices reading Deliver in 145s and Deliver to Room 203." width="1024" height="483" loading="lazy"></a>
+                <figcaption>
+                  <span class="meta-label">Corridor and room notification</span>
+                  Testing a delivery run down one of the corridors, with the notice telling the player which room to bring the package to.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
+        <article class="fact" id="play">
+          <h2>Play</h2>
+          <div class="link-grid">
+            <div class="action">
+              <span class="meta-label">Demo video</span>
+              <a href="https://youtu.be/ARooL721n7Q" target="_blank" rel="noopener noreferrer">youtu.be/ARooL721n7Q</a>
+              <img class="qr" src="assets/killer-complex-video-qr.svg" alt="QR code linking to the Killer Complex gameplay demo on YouTube" width="148" height="148">
+            </div>
+            <div class="action">
+              <span class="meta-label">Download</span>
+              <a href="https://joshmoon1512.itch.io/killer-complex" target="_blank" rel="noopener noreferrer">joshmoon1512.itch.io/killer-complex</a>
+              <img class="qr" src="assets/killer-complex-download-qr.svg" alt="QR code linking to the Killer Complex download on itch.io" width="148" height="148">
+            </div>
+          </div>
+        </article>
+      </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>Joshua Moonsamy</span>
+    <span>Portfolio <span data-year>2026</span></span>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

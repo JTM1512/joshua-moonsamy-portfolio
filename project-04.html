@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Core Breaker — Joshua Moonsamy</title>
+  <meta name="description" content="Core Breaker, a three-level 3D action platformer in Unity. Joshua Moonsamy built the enemies, the dialogue system, the sound manager, the platforms, and the menus.">
+  <meta name="theme-color" content="#10100e">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-core">
+  <a class="skip" href="#synopsis">Skip to project details</a>
+  <header class="site-header">
+    <a class="logo" href="index.html">Joshua Moonsamy</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span>
+    </button>
+    <nav class="nav" id="site-nav">
+      <a href="index.html#work" aria-current="page">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <a class="back" href="index.html#work">All work</a>
+      <section class="project-hero">
+        <div class="poster">
+          <img src="assets/core-breaker-poster.jpg" alt="Core Breaker cover. A small red-and-white robot with glowing blue eyes stands on a platform beside a flying drone, with a large dark robot and a glowing core behind them in a sci-fi city." width="1024" height="571">
+        </div>
+        <div class="project-copy">
+          <p class="kicker">Game 04 · Unity</p>
+          <h1>Core Breaker</h1>
+          <p class="team"><span class="meta-label">A game by</span>Joshua Moonsamy and Xander Jacobs</p>
+        </div>
+      </section>
+
+      <div class="project-body">
+        <aside class="quick-facts" aria-label="Quick facts">
+          <dl>
+            <div><dt>Engine</dt><dd>Unity 6</dd></div>
+            <div><dt>Team</dt><dd>2 people</dd></div>
+            <div><dt>Context</dt><dd>Coursework</dd></div>
+            <div><dt>My focus</dt><dd>Enemies, dialogue, and audio</dd></div>
+          </dl>
+          <nav class="page-nav" aria-label="On this page">
+            <a href="#synopsis">Synopsis</a>
+            <a href="#brief">Brief</a>
+            <a href="#role">My role</a>
+            <a href="#tools">Tools</a>
+            <a href="#process">Process</a>
+            <a href="#play">Play</a>
+          </nav>
+        </aside>
+      <section class="facts">
+        <article class="fact" id="synopsis">
+          <h2>Synopsis</h2>
+          <div>
+            <p>Nova is a robot who has defected from the Vexbots to stop their invasion. The Vexbots draw their power from a mothership that feeds power cores hidden across the world, and Nova has to destroy each one.</p>
+            <p>Core Breaker is a 3D action platformer built around movement. In every level you jump across moving platforms, dodge traps, fight enemy robots, and reach the power core or beat the boss to unlock the next level. Battery packs give short boosts: red for a dash, blue for slow motion, and green for a shield.</p>
+            <p>The game takes its pickups and platforming from Super Mario Bros., its mix of movement and light combat from Ratchet &amp; Clank: Rift Apart, and its idea of adding something new in every level from Astro Bot. The current build has three levels, moving platforms, three enemy types with their own combat behaviour, and a boss fight.</p>
+          </div>
+        </article>
+        <article class="fact" id="brief">
+          <h2>Project brief</h2>
+          <div>
+            <p>Core Breaker was our portfolio of evidence project, a three-level 3D platformer built in three parts. Each part required data structures we wrote ourselves rather than the built-in versions, using generic types in C#.</p>
+            <p><strong>Part 1, floating platforms.</strong> Build a dialogue system that introduces each level, stored so it lasts and is easy to edit, and played back through our own Queue. Make a hero and collectables that drop into any scene. Build the beginner level of floating platforms, with checkpoints, lives, and score tracked in our own Stack.</p>
+            <p><strong>Part 2, moving platforms and patrolling enemies.</strong> Build an advanced level with platforms that move vertically and horizontally, spiked pits, and patrolling and stationary enemies. Enemies follow waypoints stored in our own LinkedList over a baked navigation mesh, and are created through the Factory pattern. The hero animates through idle, walk, run, and jump using the State pattern.</p>
+            <p><strong>Part 3, branching paths and a final level.</strong> Build the expert level, where a boss picks a random direction at each fork of a branching path stored in our own Graph. Add a moving platform that only the hero can trigger, and a sound effects manager built on our own HashMap. Each of us then finished our own copy of the game with a main menu and our own final assets.</p>
+          </div>
+        </article>
+        <article class="fact" id="role">
+          <h2>My role</h2>
+          <div>
+            <p>I built these parts of the game:</p>
+            <ul class="role-list">
+              <li>Enemies: waypoint patrol and the linked list that stores each route, the enemy factory and spawner, a projectile enemy with moving cover, the turret, and the boss path with its navigation mesh</li>
+              <li>Dialogue: the dialogue manager, the queue, and the triggers, with a drone that speaks one line at a time, the level dialogue, and the next button</li>
+              <li>Sound: the sound effects manager and its sound map, used by the player, the drone, death, and the enemies</li>
+              <li>Platforms and pickups: the gear, plank, and numbered platform models, the script that spins them, and the pickup script</li>
+              <li>The advanced level layout and its navigation mesh, and its checkpoints</li>
+              <li>The main menu that loads all three levels, the game-over screen, skyboxes, materials, and buttons that disable the boss in the final level</li>
+            </ul>
+            <p>Xander Jacobs built the rest of the shared game.</p>
+          </div>
+        </article>
+        <article class="fact" id="tools">
+          <h2>Tools</h2>
+          <ul class="tools">
+            <li>Unity 6</li>
+            <li>C#</li>
+            <li>NavMesh</li>
+            <li>Unity Animation system</li>
+            <li>Git and GitHub</li>
+          </ul>
+        </article>
+        <article class="fact" id="process">
+          <h2>Process</h2>
+          <div class="process-gallery">
+            <figure class="shot">
+              <a href="assets/core-breaker-process-scene.png" target="_blank" rel="noopener"><img src="assets/core-breaker-process-scene.png" alt="Core Breaker's first level in the Unity scene view, with floating gear platforms, pickups, and a large gear-shaped platform, and the level hierarchy listing platforms, checkpoints, and dialogue objects." width="1024" height="456" loading="lazy"></a>
+              <figcaption>The first level in the Unity scene view, with the gear platforms, checkpoints, and dialogue triggers placed along the route.</figcaption>
+            </figure>
+            <figure class="shot shot-side">
+              <a href="assets/core-breaker-process-drone-code.png" target="_blank" rel="noopener"><img src="assets/core-breaker-process-drone-code.png" alt="DroneController.cs open in Visual Studio, showing the Update method and the ShowDrone and HideDrone coroutines." width="513" height="761" loading="lazy"></a>
+              <figcaption>
+                <span class="meta-label">DroneController.cs</span>
+                The drone that delivers the dialogue. It flies up in front of the player, keeps facing them while a line is on screen, then flies back to where it started. Its sounds play through the sound effects manager.
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+        <article class="fact" id="play">
+          <h2>Play</h2>
+          <div class="link-grid">
+            <div class="action">
+              <span class="meta-label">Demo video</span>
+              <a href="https://youtu.be/z2dAx_-5bk4" target="_blank" rel="noopener noreferrer">youtu.be/z2dAx_-5bk4</a>
+              <img class="qr" src="assets/core-breaker-video-qr.svg" alt="QR code linking to the Core Breaker gameplay demo on YouTube" width="148" height="148">
+            </div>
+            <div class="action">
+              <span class="meta-label">Download</span>
+              <a href="https://joshmoon1512.itch.io/core-breaker" target="_blank" rel="noopener noreferrer">joshmoon1512.itch.io/core-breaker</a>
+              <img class="qr" src="assets/core-breaker-download-qr.svg" alt="QR code linking to the Core Breaker download on itch.io" width="148" height="148">
+            </div>
+          </div>
+        </article>
+      </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>Joshua Moonsamy</span>
+    <span>Portfolio <span data-year>2026</span></span>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

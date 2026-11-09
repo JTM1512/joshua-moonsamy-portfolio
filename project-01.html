@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hive Zombie — Joshua Moonsamy</title>
+  <meta name="description" content="Hive Zombie, a top-down pixel-art zombie game made in Unity. Joshua Moonsamy built the gameplay systems: biting, the horde, hunger and health, and the abilities.">
+  <meta name="theme-color" content="#10100e">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-hive">
+  <a class="skip" href="#synopsis">Skip to project details</a>
+  <header class="site-header">
+    <a class="logo" href="index.html">Joshua Moonsamy</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span>
+    </button>
+    <nav class="nav" id="site-nav">
+      <a href="index.html#work" aria-current="page">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <a class="back" href="index.html#work">All work</a>
+      <section class="project-hero">
+        <div class="poster">
+          <img src="assets/hive-zombie-poster.jpg" alt="Hive Zombie poster. A crowd of pixel-art zombies on the left faces soldiers behind sandbags on the right, across a city road." width="1024" height="675">
+        </div>
+        <div class="project-copy">
+          <p class="kicker">Game 01 · Unity</p>
+          <h1>Hive Zombie</h1>
+          <p class="team"><span class="meta-label">A game by</span>Joshua Moonsamy, Liam Fullard, Ndzalama Khosa, and Kian Smith</p>
+        </div>
+      </section>
+
+      <div class="project-body">
+        <aside class="quick-facts" aria-label="Quick facts">
+          <dl>
+            <div><dt>Engine</dt><dd>Unity 6</dd></div>
+            <div><dt>Team</dt><dd>4 people</dd></div>
+            <div><dt>Context</dt><dd>48-hour game jam</dd></div>
+            <div><dt>My focus</dt><dd>Gameplay systems</dd></div>
+          </dl>
+          <nav class="page-nav" aria-label="On this page">
+            <a href="#synopsis">Synopsis</a>
+            <a href="#brief">Brief</a>
+            <a href="#role">My role</a>
+            <a href="#tools">Tools</a>
+            <a href="#process">Process</a>
+            <a href="#play">Play</a>
+          </nav>
+        </aside>
+      <section class="facts">
+        <article class="fact" id="synopsis">
+          <h2>Synopsis</h2>
+          <div>
+            <p>You are patient zero. Bite civilians to turn them into zombies, and each one joins the horde that follows you through the city. A bigger horde makes the world fight back harder, as police and then the military arrive to stop you.</p>
+            <p>The horde is also what you spend. Use followers to shield yourself, heal, or pin down a target, then decide how many you can afford to lose.</p>
+          </div>
+        </article>
+        <article class="fact" id="brief">
+          <h2>Project brief</h2>
+          <div>
+            <p>Hive Zombie was made for the Weekend Game Jam: Mystery Theme on itch.io, hosted by DG-Gamingstudio. The theme stayed secret until Friday, 16 October 2026, when it was revealed as <em>Hive Mind</em>. Teams then had until Sunday, 18 October, to design, build, and upload a playable game.</p>
+            <p>The brief asked for a small, finished game rather than a large unfinished one. Entries were judged on theme interpretation, gameplay, creativity, and polish.</p>
+            <p>We read the hive mind as a horde with one will. You start as a single zombie, every bite adds to the group you control, and that same group is what you spend to survive.</p>
+          </div>
+        </article>
+        <article class="fact" id="role">
+          <h2>My role</h2>
+          <div>
+            <p>I was the gameplay programmer. I wrote the systems the player uses on every run:</p>
+            <ul class="role-list">
+              <li>Biting, and turning civilians into zombies that join the horde</li>
+              <li>Separate hunger and health, where an empty stomach drains health and eating heals only once hunger is full</li>
+              <li>The horde as currency: a live count, followers that spread around the player without overlapping, and a best-horde record</li>
+              <li>Three abilities paid for with followers: a shield that circles the player, a sacrifice that heals, and an attack that runs down a target and pins it</li>
+              <li>Civilians that wander, then flee erratically when a zombie gets close, spawned in set areas across the map</li>
+              <li>Camera follow, the map border, the pause menu, and the game-over screen</li>
+            </ul>
+            <p>Liam Fullard, Ndzalama Khosa, and Kian Smith handled the level design, the art, and the police and military enemies.</p>
+          </div>
+        </article>
+        <article class="fact" id="tools">
+          <h2>Tools</h2>
+          <ul class="tools">
+            <li>Unity 6</li>
+            <li>C#</li>
+            <li>Universal Render Pipeline 2D</li>
+            <li>Unity Input System</li>
+            <li>TextMeshPro</li>
+            <li>Git and GitHub</li>
+            <li>itch.io</li>
+          </ul>
+        </article>
+        <article class="fact" id="process">
+          <h2>Process</h2>
+          <div class="process-gallery">
+            <figure class="shot">
+              <a href="assets/hive-zombie-process-play.png" target="_blank" rel="noopener"><img src="assets/hive-zombie-process-play.png" alt="Hive Zombie in play mode in the Unity editor. Zombies follow the player across the map, health and hunger bars sit top left, and panels on the right list the three abilities and the horde count: 3 zombies, 2 that can be spent, and a best of 3." width="1024" height="499" loading="lazy"></a>
+              <figcaption>Testing in play mode. The health and hunger bars, the ability costs, and the horde count are all systems I built. Here the horde has three zombies, two of them can be spent on abilities, and the best so far is three.</figcaption>
+            </figure>
+            <figure class="shot">
+              <a href="assets/hive-zombie-process-follow-code.png" target="_blank" rel="noopener"><img src="assets/hive-zombie-process-follow-code.png" alt="ZombieFollow.cs open in Visual Studio, showing the follow, shield, and attack fields and the StartFollowing method." width="1024" height="684" loading="lazy"></a>
+              <figcaption>
+                <span class="meta-label">ZombieFollow.cs</span>
+                The script on every bitten civilian. It follows the player, circles them for the shield, or runs down and pins a target for the attack. Each zombie takes its own spot in the horde so followers do not stack on top of each other.
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+        <article class="fact" id="play">
+          <h2>Play</h2>
+          <div class="link-grid">
+            <div class="action">
+              <span class="meta-label">Demo video</span>
+              <a href="https://youtu.be/GCnilAZT5hk" target="_blank" rel="noopener noreferrer">youtu.be/GCnilAZT5hk</a>
+              <img class="qr" src="assets/hive-zombie-video-qr.svg" alt="QR code linking to the Hive Zombie gameplay demo on YouTube" width="148" height="148">
+            </div>
+            <div class="action">
+              <span class="meta-label">Download</span>
+              <a href="https://xspardax.itch.io/hive-zombie" target="_blank" rel="noopener noreferrer">xspardax.itch.io/hive-zombie</a>
+              <img class="qr" src="assets/hive-zombie-download-qr.svg" alt="QR code linking to the Hive Zombie download on itch.io" width="148" height="148">
+            </div>
+          </div>
+        </article>
+      </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>Joshua Moonsamy</span>
+    <span>Portfolio <span data-year>2026</span></span>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

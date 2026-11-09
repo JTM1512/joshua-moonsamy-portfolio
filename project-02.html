@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Night Light — Joshua Moonsamy</title>
+  <meta name="description" content="Night Light, a 3D tower defence game in Unreal Engine 5.8. Joshua Moonsamy built the defenders and their upgrades, the player controls, the Dream Token currency, the menus, and the procedural Remnants feature.">
+  <meta name="theme-color" content="#10100e">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-night">
+  <a class="skip" href="#synopsis">Skip to project details</a>
+  <header class="site-header">
+    <a class="logo" href="index.html">Joshua Moonsamy</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+      <span></span>
+    </button>
+    <nav class="nav" id="site-nav">
+      <a href="index.html#work" aria-current="page">Work</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <a class="back" href="index.html#work">All work</a>
+      <section class="project-hero">
+        <div class="poster">
+          <img src="assets/night-light-poster.jpg" alt="Night Light poster. A glowing crystal on a stone tower at the centre of a night map, guarded by robot, UFO, and toy-train defenders, while pumpkin-headed creatures and ghosts close in from a dark rift." width="1024" height="623">
+        </div>
+        <div class="project-copy">
+          <p class="kicker">Game 02 · Unreal Engine</p>
+          <h1>Night Light</h1>
+          <p class="team"><span class="meta-label">A game by</span>Joshua Moonsamy and Xander Jacobs</p>
+        </div>
+      </section>
+
+      <div class="project-body">
+        <aside class="quick-facts" aria-label="Quick facts">
+          <dl>
+            <div><dt>Engine</dt><dd>Unreal Engine 5.8</dd></div>
+            <div><dt>Team</dt><dd>2 people</dd></div>
+            <div><dt>Context</dt><dd>Coursework, three parts</dd></div>
+            <div><dt>My focus</dt><dd>Gameplay and UI</dd></div>
+          </dl>
+          <nav class="page-nav" aria-label="On this page">
+            <a href="#synopsis">Synopsis</a>
+            <a href="#brief">Brief</a>
+            <a href="#role">My role</a>
+            <a href="#tools">Tools</a>
+            <a href="#process">Process</a>
+            <a href="#play">Play</a>
+          </nav>
+        </aside>
+      <section class="facts">
+        <article class="fact" id="synopsis">
+          <h2>Synopsis</h2>
+          <div>
+            <p>At night, a sleeper’s dreams are protected by the Dream Core. Rifts open in the dreamscape, and creatures of darkness pour out to reach the Core and destroy it. Using the energy of dreams, you summon defenders to hold the light and keep the nightmares away until morning.</p>
+            <p>Night Light is a 3D tower defence game on a procedurally generated map. Enemies walk carved routes towards the crystal at the centre. You spend Dream Tokens to place defenders on platforms along those routes, and the game ends if the Core’s health reaches zero.</p>
+            <p>The waves adapt to you. They get harder when you are doing well, easier when you are struggling, and they send enemies down whichever routes you have defended least. The goal is to survive as many waves as you can.</p>
+            <p>Defenders can be upgraded twice, and they grow stronger and change their look each time. Enemies killed before they reach the Core can leave behind remnants, random patches of dream energy that help or hurt the defenders nearby.</p>
+          </div>
+        </article>
+        <article class="fact" id="brief">
+          <h2>Project brief</h2>
+          <div>
+            <p>Night Light is our portfolio of evidence project, a tower defence game built across three parts, each marked out of 100.</p>
+            <p><strong>Part 1, procedural terrain.</strong> Generate a 3D terrain mesh at runtime that changes every new game, with at least three paths leading to a central tower. The tower has health, attacks enemies on its own, and the game ends when it falls. Players place defenders on set spots that keep the paths clear, and one enemy type spawns from points based on the terrain. The game also needed a complete loop, clear UI that shows health, costs, and damage, and a pause and restart.</p>
+            <p><strong>Part 2, procedural enemy waves.</strong> Add two more enemy types and two more defender types, each with distinct behaviour and a distinct look. Each of us wrote our own plan for a wave system that scales difficulty and adapts to the player’s skill and play style, and the team then built it.</p>
+            <p><strong>Part 3, upgrades, shaders, and effects.</strong> Add at least two upgrades for every defender and for the tower, two custom shaders, a custom particle effect, a screen post-processing effect, and a procedurally generated feature of our own design.</p>
+            <p>Each part ends with an individual presentation video of about five minutes.</p>
+          </div>
+        </article>
+        <article class="fact" id="role">
+          <h2>My role</h2>
+          <div>
+            <p>I built the player’s side of the game and our procedural feature:</p>
+            <ul class="role-list">
+              <li>The player controls and the game mode they run through</li>
+              <li>The three defenders: the Patroller that circles its platform and strikes the nearest enemy, the Shooter that fires at one enemy from long range, and the Pulse that damages every enemy around it</li>
+              <li>Defender platforms, swapping between defender types, and freeing a platform when its defender is destroyed</li>
+              <li>The Dream Token currency used to buy defenders</li>
+              <li>The pause menu, the game-over screen, the controls screen, and the wave display</li>
+              <li>Setting up the defender and enemy models in the game, including the Brute and the Shade, and balancing the game</li>
+              <li>Defender upgrades: a shared upgrade interface, two upgrade levels for each of the three defenders, upgrading with the U key, and a new look at each level</li>
+              <li>Remnants, our procedurally generated feature. When an enemy dies before reaching the Core, a manager may drop one of six remnant types, picked by weighted chance from a data table, with some enemies more likely to drop certain types. Each remnant rolls its own size, duration, and strength. Three are hazards: the Weakening Puddle, the Damage Zone, and the Blackout Cloud. Three help: the Healing Glow, the Light Burst, and the Dream Shard.</li>
+            </ul>
+            <p>Xander Jacobs built the procedural map and routes, the enemies including the mutating elites, the adaptive wave director, the tower upgrades, the crayon-style HUD, and the shaders, particle effect, and post-processing.</p>
+          </div>
+        </article>
+        <article class="fact" id="tools">
+          <h2>Tools</h2>
+          <ul class="tools">
+            <li>Unreal Engine 5.8</li>
+            <li>C++</li>
+            <li>Blueprints</li>
+            <li>Visual Studio</li>
+            <li>Fab</li>
+            <li>Git and GitHub</li>
+          </ul>
+        </article>
+        <article class="fact" id="process">
+          <h2>Process</h2>
+          <div class="process-gallery">
+            <figure class="shot">
+              <a href="assets/night-light-process-play.png" target="_blank" rel="noopener"><img src="assets/night-light-process-play.png" alt="Night Light being played in the Unreal editor on night 3. Defenders stand on wooden crate platforms around the Dream Core tower, with the Dream Token count top left, a night progress bar at the top, a defender upgrade card on the right, and the defender bar along the bottom." width="1024" height="545" loading="lazy"></a>
+              <figcaption>Testing night 3 in the Unreal editor. Defenders guard the Dream Core from their platforms, with the Dream Token count in the top left, the night counter in the top right, and the defenders to buy along the bottom. The card on the right shows what the Shooter’s next upgrade will change.</figcaption>
+            </figure>
+            <div class="shot-pair">
+              <figure class="shot">
+                <a href="assets/night-light-process-controller.png" target="_blank" rel="noopener"><img src="assets/night-light-process-controller.png" alt="The BP_TDPlayerController event graph in Unreal Engine, with mouse input nodes leading to a cast to the defender placement Blueprint and several spawn actor nodes." width="1024" height="524" loading="lazy"></a>
+                <figcaption>
+                  <span class="meta-label">BP_TDPlayerController</span>
+                  The player controller Blueprint. A click checks what is under the cursor, and if it is a defender platform, spawns the chosen defender on it. Pressing U on a defender upgrades it.
+                </figcaption>
+              </figure>
+              <figure class="shot">
+                <a href="assets/night-light-process-remnants.png" target="_blank" rel="noopener"><img src="assets/night-light-process-remnants.png" alt="The RollRemnant function in the BP_RemnantManager Blueprint, with loops over data table rows that add up a running weight and pick a remnant type." width="1024" height="518" loading="lazy"></a>
+                <figcaption>
+                  <span class="meta-label">BP_RemnantManager</span>
+                  The function that picks which remnant to drop. It adds up the weight of each remnant type in the data table, including bonuses for the kind of enemy that died, then rolls a random number to choose one.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
+        <article class="fact" id="play">
+          <h2>Play</h2>
+          <div class="link-grid">
+            <div class="action">
+              <span class="meta-label">Demo video</span>
+              <a href="https://youtu.be/4E8OYA-cT5s" target="_blank" rel="noopener noreferrer">youtu.be/4E8OYA-cT5s</a>
+              <img class="qr" src="assets/night-light-video-qr.svg" alt="QR code linking to the Night Light gameplay demo on YouTube" width="148" height="148">
+            </div>
+            <div class="action">
+              <span class="meta-label">Download</span>
+              <p class="is-waiting">Download link coming soon</p>
+              <div class="qr-plate">QR</div>
+            </div>
+          </div>
+        </article>
+      </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span>Joshua Moonsamy</span>
+    <span>Portfolio <span data-year>2026</span></span>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
