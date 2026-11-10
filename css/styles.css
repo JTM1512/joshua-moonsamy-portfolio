@@ -453,7 +453,41 @@ h1 {
 
 .about-copy p:first-child { margin-top: 0; color: var(--paper); }
 
-.contact-grid { grid-template-columns: repeat(3, 1fr); }
+.about-details {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+  margin-top: 24px;
+}
+
+.about-block {
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.about-block .role-list { margin-top: 0; }
+
+.about-block p { margin: 0 0 12px; color: var(--muted); }
+
+.about-cta {
+  grid-column: 1 / -1;
+  margin: 8px 0 0;
+  font-family: var(--serif);
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.25;
+}
+
+.about-cta a,
+.about-copy a { color: var(--accent); text-underline-offset: 4px; }
+
+.contact-grid { grid-template-columns: repeat(2, 1fr); column-gap: 48px; row-gap: 0; }
+
+.site-footer a { text-decoration: none; }
+
+.site-footer a:hover { color: var(--accent); }
+
+.contact-card span { overflow-wrap: anywhere; }
 
 .contact-card {
   display: block;
@@ -799,6 +833,7 @@ h1 {
 
   .work-link,
   .about-grid,
+  .about-details,
   .contact-grid,
   .fact,
   .link-grid {
